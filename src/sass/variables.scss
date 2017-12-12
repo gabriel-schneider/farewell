@@ -1,0 +1,31 @@
+@import 'mixins/math';
+
+$color-primary: rgb(63, 166, 150) ;
+$color-secundary: rgb(72, 99, 106);
+$color-white: rgb(241, 241, 241);
+
+$breakpoints: (
+    'lg': 1024px,
+    'md': 768px,
+    'sm': 320px
+);
+
+$font-family: ('Open Sans', 'Arial', 'sans-serif');
+$font-scale: 1.333;
+
+@for $i from 0 through 4 {
+    .h#{$i + 1} {
+        font-size: pow($font-scale, 4 - $i) * 1em;
+        margin: 0;
+        margin-bottom: 1rem;
+        display: block;
+        overflow: hidden;
+    }
+}
+
+p {
+    display: block;
+    margin: 0;
+    margin-top: 1rem;
+    overflow: hidden;
+}
