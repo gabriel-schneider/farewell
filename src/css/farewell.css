@@ -1,46 +1,38 @@
 .h1 {
-  font-size: 3.15733em;
-  margin: 0;
-  margin-bottom: 1rem;
-  display: block;
-  overflow: hidden; }
+  font-size: 3.1573345183em;
+  margin: 0.75em 0; }
 
 .h2 {
-  font-size: 2.36859em;
-  margin: 0;
-  margin-bottom: 1rem;
-  display: block;
-  overflow: hidden; }
+  font-size: 2.368593037em;
+  margin: 0.75em 0; }
 
 .h3 {
-  font-size: 1.77689em;
-  margin: 0;
-  margin-bottom: 1rem;
-  display: block;
-  overflow: hidden; }
+  font-size: 1.776889em;
+  margin: 0.75em 0; }
 
 .h4 {
   font-size: 1.333em;
-  margin: 0;
-  margin-bottom: 1rem;
-  display: block;
-  overflow: hidden; }
+  margin: 0.75em 0; }
 
 .h5 {
   font-size: 1em;
-  margin: 0;
-  margin-bottom: 1rem;
-  display: block;
-  overflow: hidden; }
+  margin: 0.75em 0; }
 
-p {
-  display: block;
+html {
+  font-family: "Open Sans", "Arial", "sans-serif";
+  font-size: 16px; }
+
+.p {
   margin: 0;
-  margin-top: 1rem;
-  overflow: hidden; }
+  margin-bottom: 1em;
+  line-height: 1.6em; }
+  .p:not(:last-of-type) {
+    margin-bottom: 2em; }
+
+.small {
+  font-size: 0.75em; }
 
 *, *:before, *:after {
-  box-sizing: border-box;
-  font-family: "Open Sans", "Arial", "sans-serif"; }
+  box-sizing: border-box; }
 
 /*# sourceMappingURL=farewell.css.map */

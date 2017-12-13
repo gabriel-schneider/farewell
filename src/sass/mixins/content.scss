@@ -1,0 +1,8 @@
+@mixin heading($count, $font-scale) {
+    @for $i from 0 through $count {
+        .h#{$i + 1} {
+            font-size: pow($font-scale, $count - $i) * 1em;
+            margin: 0.75em 0;
+        }
+    }
+}
