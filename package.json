@@ -1,0 +1,25 @@
+{
+  "name": "farewell",
+  "version": "0.0.1",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gabriel-schneider/farewell.git"
+  },
+  "author": "Gabriel Schneider",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gabriel-schneider/farewell/issues"
+  },
+  "homepage": "https://github.com/gabriel-schneider/farewell#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "pug": "^2.0.0-rc.4"
+  }
+}
