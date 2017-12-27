@@ -9,9 +9,11 @@ gulp.task('html', function() {
 });
 
 gulp.task('css', function() {
+   gulp.src('node_modules/normalize.css/normalize.css')
+      .pipe(gulp.dest('src/css'));
    gulp.src(['src/sass/farewell*'])
       .pipe(sass())
-      .pipe(gulp.dest('src/css'))
+      .pipe(gulp.dest('src/css'));
 });
 
 gulp.task('default', ['html', 'css']);

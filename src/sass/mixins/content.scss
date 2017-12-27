@@ -1,3 +1,5 @@
+@import 'math';
+
 @mixin heading($count, $font-scale) {
     @for $i from 0 through $count {
         .h#{$i + 1} {

@@ -1,0 +1,18 @@
+.row .p {
+   text-align: center;
+   border: 2px solid #1abc9c;
+   border-radius: 3px;
+   margin: 0;
+   padding: 0.25rem;
+}
+
+/* .row {
+   border: 2px dashed rgb(200, 200, 200);
+   margin-bottom: 1rem;
+   padding: 0.25rem;
+} */
+
+body {
+   margin: 0 auto;
+   max-width: 960px;
+}

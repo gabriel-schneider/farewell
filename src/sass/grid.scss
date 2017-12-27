@@ -1,0 +1,58 @@
+
+
+.container {
+   display: flex;
+   flex-direction: column;
+
+   .row {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      &.row-center {
+         justify-content: center;
+      }
+
+      &.row-end {
+         justify-content: flex-end; 
+      }
+
+      &.row-between {
+         justify-content: space-between;
+      }
+
+      &.row-around {
+         justify-content: space-around;
+      }
+
+      &.gapless {
+         > [class*=col] {
+            padding: 0;      
+         }
+      }
+   }
+   
+   [class*=col] {      
+      padding: 0.25rem;      
+   }
+}
+
+//@TODO: Pass to a separate file
+@mixin generate-columns($count, $min-width, $prefix) {
+   @for $i from 1 through 12 {
+      .col#{$prefix}-#{$i} {
+         $width: ($i * 100% / $count);
+         width: $width;      
+         min-width: $width;      
+      }
+   }
+}
+
+@include generate-columns($columns-count, 0, '');
+
+@each $key, $value in $breakpoints {
+   @media (min-width: $value) {
+      @include generate-columns($columns-count, $value, '-' + $key);
+   }
+}
+
