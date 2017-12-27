@@ -5,7 +5,7 @@ block extra_style
       
 block content
    h3(class="h3") General Columns
-   div(class="container")
+   div(class="grid")
       div(class="row")
          - for(var i = 0; i < 2; i++)
             div(class="col-6")
@@ -26,13 +26,13 @@ block content
             div(class="col-2")
                p(class="p") Laborum dolor aute aliqua sunt ipsum ullamco minim minim enim commodo.                  
    h3(class="h3") Responsive Columns
-   div(class="container")
+   div(class="grid")
       div(class="row")
          - for(var i = 0; i < 4; i++)
             div(class="col-lg-3 col-md-6 col-sm-12")
                p(class="p") Laborum dolor aute aliqua sunt ipsum ullamco minim minim enim commodo.         
    h3(class="h3") Align Row Columns
-   div(class="container")
+   div(class="grid")
       p(class="h4") Center
       div(class="row row-center")
          - for(var i = 0; i < 2; i++)
@@ -52,10 +52,9 @@ block content
       div(class="row row-around")
          - for(var i = 0; i < 2; i++)
             div(class="col-3")
-               p(class="p") Laborum dolor aute aliqua sunt ipsum ullamco minim minim enim commodo.   
-
+               p(class="p") Laborum dolor aute aliqua sunt ipsum ullamco minim minim enim commodo.      
    h3(class="h3") Gapless 
-   div(class="container")
+   div(class="grid")
       div(class="row gapless")
          - for(var i = 0; i < 4; i++)
             div(class="col-3")

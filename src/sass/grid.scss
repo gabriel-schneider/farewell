@@ -1,8 +1,13 @@
 
+@import 'mixins/grid';
 
-.container {
+.grid {
    display: flex;
    flex-direction: column;
+   
+   &.gapless {
+      @include gapless;
+   }
 
    .row {
       display: flex;
@@ -26,10 +31,9 @@
       }
 
       &.gapless {
-         > [class*=col] {
-            padding: 0;      
-         }
+         @include gapless;
       }
+      
    }
    
    [class*=col] {      

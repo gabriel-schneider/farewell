@@ -19,6 +19,13 @@ gulp.task('css', function() {
 gulp.task('default', ['html', 'css']);
 
 gulp.task('watch', function() {
-   gulp.watch(['src/pug/*.pug'], ['html']);
-   gulp.watch(['src/sass/*.scss'], ['css']);
+   
+   let notifyEvent = function(event) {
+      console.log('File ' + event.path + ' was ' + event.type + ',running tasks ...');
+   }
+
+   let watcherPug = gulp.watch(['src/pug/*.pug'], ['html']);
+   watcherPug.on('change', function(event) {notifyEvent(event)});
+   let watcherSass = gulp.watch(['src/sass/*.scss'], ['css']);
+   watcherSass.on('change', function(event) {notifyEvent(event)});
 })

@@ -1,21 +1,23 @@
-.container {
+.grid {
   display: flex;
   flex-direction: column; }
-  .container .row {
+  .grid.gapless [class*=col] {
+    padding: 0; }
+  .grid .row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap; }
-    .container .row.row-center {
+    .grid .row.row-center {
       justify-content: center; }
-    .container .row.row-end {
+    .grid .row.row-end {
       justify-content: flex-end; }
-    .container .row.row-between {
+    .grid .row.row-between {
       justify-content: space-between; }
-    .container .row.row-around {
+    .grid .row.row-around {
       justify-content: space-around; }
-    .container .row.gapless > [class*=col] {
+    .grid .row.gapless [class*=col] {
       padding: 0; }
-  .container [class*=col] {
+  .grid [class*=col] {
     padding: 0.25rem; }
 
 .col-1 {

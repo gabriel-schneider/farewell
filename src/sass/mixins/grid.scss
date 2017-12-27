@@ -7,3 +7,9 @@
       }
    }
 }
+
+@mixin gapless {
+   [class*=col] {
+      padding: 0;      
+   }
+}
