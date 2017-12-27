@@ -1,0 +1,9 @@
+@mixin generate-columns($count, $screen-min-width, $prefix) {
+   @for $i from 1 through $count {
+      .col#{$prefix}-#{$i} {
+         $width: ($i * 100% / $count);
+         width: $width;      
+         min-width: $width;      
+      }
+   }
+}

@@ -37,17 +37,6 @@
    }
 }
 
-//@TODO: Pass to a separate file
-@mixin generate-columns($count, $min-width, $prefix) {
-   @for $i from 1 through 12 {
-      .col#{$prefix}-#{$i} {
-         $width: ($i * 100% / $count);
-         width: $width;      
-         min-width: $width;      
-      }
-   }
-}
-
 @include generate-columns($columns-count, 0, '');
 
 @each $key, $value in $breakpoints {
