@@ -1,6 +1,8 @@
 .grid {
   display: flex;
   flex-direction: column; }
+  .grid [class*=col] {
+    padding: 0.5rem; }
   .grid.gapless [class*=col] {
     padding: 0; }
   .grid .row {
@@ -17,8 +19,6 @@
       justify-content: space-around; }
     .grid .row.gapless [class*=col] {
       padding: 0; }
-  .grid [class*=col] {
-    padding: 0.25rem; }
 
 .col-1 {
   width: 8.33333%;

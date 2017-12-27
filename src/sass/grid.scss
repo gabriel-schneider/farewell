@@ -2,50 +2,50 @@
 @import 'mixins/grid';
 
 .grid {
-   display: flex;
-   flex-direction: column;
-   
-   &.gapless {
-      @include gapless;
-   }
+    display: flex;
+    flex-direction: column;
 
-   .row {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
+    [class*=col] {      
+        padding: $columns-gap;      
+    }
 
-      &.row-center {
-         justify-content: center;
-      }
+    &.gapless {
+        @include gapless;
+    }
 
-      &.row-end {
-         justify-content: flex-end; 
-      }
+    .row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
 
-      &.row-between {
-         justify-content: space-between;
-      }
+        &.row-center {
+            justify-content: center;
+        }
 
-      &.row-around {
-         justify-content: space-around;
-      }
+        &.row-end {
+            justify-content: flex-end; 
+        }
 
-      &.gapless {
-         @include gapless;
-      }
-      
-   }
-   
-   [class*=col] {      
-      padding: 0.25rem;      
-   }
+        &.row-between {
+            justify-content: space-between;
+        }
+
+        &.row-around {
+            justify-content: space-around;
+        }
+
+        &.gapless {
+            @include gapless;
+        }
+    }
+
 }
 
 @include generate-columns($columns-count, 0, '');
 
 @each $key, $value in $breakpoints {
-   @media (min-width: $value) {
-      @include generate-columns($columns-count, $value, '-' + $key);
-   }
+    @media (min-width: $value) {
+        @include generate-columns($columns-count, $value, '-' + $key);
+    }
 }
 

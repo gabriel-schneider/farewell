@@ -18,7 +18,7 @@ gulp.task('css', function() {
 
 gulp.task('default', ['html', 'css']);
 
-gulp.task('watch', function() {
+gulp.task('watch', ['html', 'css'], function() {
    
    let notifyEvent = function(event) {
       console.log('File ' + event.path + ' was ' + event.type + ',running tasks ...');
