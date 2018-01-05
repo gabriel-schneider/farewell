@@ -1,11 +1,24 @@
 const gulp = require('gulp');
+const util = require('gulp-util');
 const pug = require('gulp-pug');
 const sass = require('gulp-sass');
+const tap = require('gulp-tap');
+const path = require('path');
+const foreach = require('gulp-foreach');
 
 gulp.task('html', function() {
-   gulp.src(['src/pug/*.pug', '!src/pug/base.pug'])
-      .pipe(pug())
-      .pipe(gulp.dest('demo'))
+
+    gulp.src(['src/pug/*.pug', '!src/pug/base.pug'])
+        .pipe(foreach(function(stream, file) {
+            return stream.pipe(pug({
+                pretty: true,
+                data: {
+                    filename: path.parse(file.path).name                    
+                }
+            }))
+        }))
+        .pipe(gulp.dest('demo'))
+    
 });
 
 gulp.task('css', function() {

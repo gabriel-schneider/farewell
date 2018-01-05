@@ -19,8 +19,10 @@
   "homepage": "https://github.com/gabriel-schneider/farewell#readme",
   "dependencies": {
     "gulp": "^3.9.1",
+    "gulp-foreach": "^0.1.0",
     "gulp-pug": "^3.3.0",
     "gulp-sass": "^3.1.0",
+    "gulp-tap": "^1.0.1",
     "normalize.css": "^7.0.0",
     "pug": "^2.0.0-rc.4"
   }
