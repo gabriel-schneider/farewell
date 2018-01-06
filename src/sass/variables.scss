@@ -1,15 +1,12 @@
-$color-primary: rgb(63, 166, 150) !default;
-$color-secundary: rgb(72, 99, 106) !default;
-$color-white: rgb(241, 241, 241) !default;
-
 $breakpoints: (
    'sm': 320px,
    'md': 768px,
    'lg': 1024px
 ) !default;
 
-$font-family: ('Open Sans', 'Arial', 'sans-serif') !default;
-$font-size: 16px !default;
-
 $columns-count: 12 !default;
 $columns-gap: 0.5rem !default;
+
+$font-family: ('Arial', sans-serif) !default;
+$font-family-monospaced: ('Times', serif, monospace) !default;
+$font-size: 16px !default;

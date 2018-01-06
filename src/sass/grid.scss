@@ -4,7 +4,6 @@
 .grid {
     display: flex;
     flex-direction: column;
-
     [class*=col] {      
         padding: $columns-gap;      
     }
@@ -34,7 +33,7 @@
             justify-content: space-around;
         }
 
-        &.gapless {
+        &.row-gapless {
             @include gapless;
         }
     }

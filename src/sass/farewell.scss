@@ -1,8 +1,30 @@
+@charset 'utf-8';
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+@import url('https://fonts.googleapis.com/css?family=OpenSans');
+
+// Mixins
+@import 'mixins/general';
+@import 'mixins/grid';
+@import 'mixins/typography';
+@import 'mixins/button';
+
+// Core
 @import 'variables';
 @import 'grid';
 @import 'typography';
-@charset 'utf-8';
+@import 'button';
+
+// Themes
+@import 'themes/theme';
+
 
 *, *:before, *:after {
     box-sizing: border-box;    
+}
+
+.main-content {
+    max-width: 1024px;
+    margin: 0 auto; 
 }

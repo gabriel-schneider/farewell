@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Inconsolata");
+@import url("https://fonts.googleapis.com/css?family=OpenSans");
 .grid {
   display: flex;
   flex-direction: column; }
@@ -17,7 +19,7 @@
       justify-content: space-between; }
     .grid .row.row-around {
       justify-content: space-around; }
-    .grid .row.gapless [class*=col] {
+    .grid .row.row-gapless [class*=col] {
       padding: 0; }
 
 .col-1 {
@@ -202,9 +204,8 @@
   font-size: 1em;
   margin: 0.75em 0; }
 
-html {
-  font-family: "Open Sans", "Arial", "sans-serif";
-  font-size: 16px; }
+.title {
+  margin-bottom: 0; }
 
 .p {
   margin: 0;
@@ -216,5 +217,45 @@ html {
 .small {
   font-size: 0.75em; }
 
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.25rem;
+  border: 0;
+  color: inherit;
+  cursor: pointer; }
+
+.btn {
+  border-radius: 1px; }
+  .btn-primary {
+    background-color: #3fa696;
+    color: white; }
+    .btn-primary:hover {
+      background-color: #46b8a7; }
+    .btn-primary:active {
+      background-color: #389485; }
+  .btn-secundary {
+    background-color: #48636a;
+    color: white; }
+    .btn-secundary:hover {
+      background-color: #527179; }
+    .btn-secundary:active {
+      background-color: #3e555b; }
+  .btn-default {
+    background-color: #f0f0f0;
+    color: black; }
+    .btn-default:hover {
+      background-color: #fdfdfd; }
+    .btn-default:active {
+      background-color: #e3e3e3; }
+
+html {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 16px; }
+
 *, *:before, *:after {
   box-sizing: border-box; }
+
+.main-content {
+  max-width: 1024px;
+  margin: 0 auto; }

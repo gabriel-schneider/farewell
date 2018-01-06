@@ -1,7 +1,4 @@
 extends base.pug
-
-block extra_style
-    link(rel="stylesheet", href="custom.css")
       
 block content
     h3(class="h3") General Columns
@@ -25,34 +22,44 @@ block content
             - for(var i = 0; i < 6; i++)
                 div(class="col-2")
                     p(class="p") Laborum dolor aute aliqua sunt ipsum ullamco minim minim enim commodo.                  
-    h3(class="h3") Responsive Columns
+   
+    h3(class="h3 title") Responsive Columns
+    p(class="p subtitle") Columns can change the way they behave depending of the screen width
     div(class="grid")
         div(class="row")
             - for(var i = 0; i < 4; i++)
                 div(class="col-lg-3 col-md-6 col-sm-12")
                     p(class="p") Laborum dolor aute aliqua sunt ipsum ullamco minim minim enim commodo.         
-    h3(class="h3") Align Row Columns
+    
+    h3(class="h3 title") Align Row Columns
+    p(class="p subtitle") Align rows is easy with simple modifiers
+
     div(class="grid")
+        
         p(class="h4") Center
         div(class="row row-center")
             - for(var i = 0; i < 2; i++)
                 div(class="col-3")
                     p(class="p") Laborum dolor aute aliqua sunt ipsum ullamco minim minim enim commodo.                        
+        
         p(class="h4") End               
         div(class="row row-end")
             - for(var i = 0; i < 2; i++)
                 div(class="col-3")
                     p(class="p") Laborum dolor aute aliqua sunt ipsum ullamco minim minim enim commodo.                                       
+        
         p(class="h4") Between               
         div(class="row row-between")
             - for(var i = 0; i < 2; i++)
                 div(class="col-3")
                     p(class="p") Laborum dolor aute aliqua sunt ipsum ullamco minim minim enim commodo.                                       
+       
         p(class="h4") Around               
         div(class="row row-around")
             - for(var i = 0; i < 2; i++)
                 div(class="col-3")
                     p(class="p") Laborum dolor aute aliqua sunt ipsum ullamco minim minim enim commodo.      
+    
     h3(class="h3") Gapless 
     div(class="grid")
         div(class="row gapless")

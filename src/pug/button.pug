@@ -1,0 +1,17 @@
+extends base.pug
+
+block content
+    - var classes = ['', 'btn-default', 'btn-primary', 'btn-secundary']
+    h2(class="h2") Links
+    each cls in classes
+        div 
+            a(class="btn " + cls href="#") Button
+    h2(class="h2") Buttons            
+    each cls in classes
+        div 
+            button(class="btn " + cls) Button      
+    h2(class="h2") Submit            
+    each cls in classes
+        div 
+            input(class="btn " + cls type="submit" value="Button")                     
+                

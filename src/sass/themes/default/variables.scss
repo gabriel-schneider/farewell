@@ -1,0 +1,13 @@
+$color-primary: rgb(63, 166, 150);
+$color-secundary: rgb(72, 99, 106);
+$color-white: rgb(241, 241, 241);
+
+$main-colors: (
+    'primary': $color-primary, 
+    'secundary': $color-secundary
+);
+
+$button-colors: map-merge($main-colors, ('default': #f0f0f0));
+
+$font-family: ('Open Sans', 'Arial', sans-serif);
+$font-family-monospaced: ('Inconsolata', 'Times', serif, monospace);

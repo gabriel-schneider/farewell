@@ -1,10 +1,9 @@
-@import 'mixins/content';
+@import 'mixins/typography';
 
 @include heading(4, 1.333);
 
-html {
-    font-family: $font-family;
-    font-size : $font-size;    
+.title {
+    margin-bottom: 0;
 }
 
 .p {
