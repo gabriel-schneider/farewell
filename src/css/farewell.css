@@ -223,6 +223,10 @@
   padding: 0.25rem;
   border: 0;
   color: inherit;
+  height: 2rem;
+  text-align: center;
+  line-height: 2rem;
+  vertical-align: middle;
   cursor: pointer; }
 
 .btn {
