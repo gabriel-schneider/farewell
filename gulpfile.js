@@ -20,7 +20,8 @@ gulp.task('html', function() {
                     filename: path.parse(file.path).name                    
                 }
             }))
-        })).on('error', errorHandler)
+        }))
+        .on('error', errorHandler)
         .pipe(gulp.dest('demo'))
     
 });
@@ -30,7 +31,8 @@ gulp.task('css', function() {
       .pipe(gulp.dest('src/css'))
 
    gulp.src(['src/sass/farewell*'])
-    .pipe(sass()).on('error', errorHandler)
+    .pipe(sass())
+    .on('error', errorHandler)
     .pipe(gulp.dest('src/css'))
 });
 

@@ -217,40 +217,47 @@
 .small {
   font-size: 0.75em; }
 
-.btn {
+.button {
   text-decoration: none;
-  display: inline-block;
-  padding: 0.25rem;
+  display: inline-flex;
+  align-content: center;
+  align-items: center;
+  padding: 0.5em;
   border: 0;
   color: inherit;
-  height: 2rem;
-  text-align: center;
-  line-height: 2rem;
-  vertical-align: middle;
-  cursor: pointer; }
+  font-family: inherit;
+  line-height: 1em;
+  cursor: pointer;
+  margin: 0 0.5em 0.5em 0; }
 
-.btn {
+.button-group {
+  display: inline-flex;
+  margin: 0.5em; }
+  .button-group .button {
+    margin: 0; }
+
+.button {
   border-radius: 1px; }
-  .btn-primary {
+  .button-primary {
     background-color: #3fa696;
     color: white; }
-    .btn-primary:hover {
+    .button-primary:hover {
       background-color: #46b8a7; }
-    .btn-primary:active {
+    .button-primary:active {
       background-color: #389485; }
-  .btn-secundary {
+  .button-secundary {
     background-color: #48636a;
     color: white; }
-    .btn-secundary:hover {
+    .button-secundary:hover {
       background-color: #527179; }
-    .btn-secundary:active {
+    .button-secundary:active {
       background-color: #3e555b; }
-  .btn-default {
+  .button-default {
     background-color: #f0f0f0;
     color: black; }
-    .btn-default:hover {
+    .button-default:hover {
       background-color: #fdfdfd; }
-    .btn-default:active {
+    .button-default:active {
       background-color: #e3e3e3; }
 
 html {

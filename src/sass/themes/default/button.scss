@@ -1,5 +1,4 @@
-.btn {
-
+.button {
     border-radius: 1px;
 
     @each $key, $value in $button-colors {
