@@ -1,0 +1,16 @@
+
+//@import 'mixins/grid';
+
+.media {
+    display: flex;
+    flex-direction: row;
+    background-color: red;
+}
+
+.media-figure {
+
+}
+
+.media-content {
+    flex-grow: 1;
+}
