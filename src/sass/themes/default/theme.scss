@@ -1,5 +1,10 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 @import 'variables';
 @import 'button';
+@import 'media-object';
 
 html {
     font-family: $font-family;

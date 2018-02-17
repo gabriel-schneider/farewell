@@ -1,0 +1,11 @@
+@mixin inline-mod() {
+    @include modifier('inline') {
+        display: inline-block;
+    }
+}
+
+@mixin block-mod() {
+    @include modifier('block') {
+        display: block;
+    }
+}

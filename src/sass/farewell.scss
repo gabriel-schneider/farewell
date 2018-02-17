@@ -1,20 +1,19 @@
 @charset 'utf-8';
 
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Inconsolata');
-@import url('https://fonts.googleapis.com/css?family=OpenSans');
-
 // Mixins
+@import 'mixins/bem';
 @import 'mixins/general';
 @import 'mixins/grid';
 @import 'mixins/typography';
 @import 'mixins/button';
+@import 'mixins/helper';
 
 // Core
 @import 'variables';
 @import 'grid';
 @import 'typography';
 @import 'button';
+@import 'media-object';
 
 // Themes
 @import 'themes/theme';
@@ -28,3 +27,41 @@
     max-width: 1024px;
     margin: 0 auto; 
 }
+
+.image {
+    display: block;
+    @include inline-mod;
+}
+
+.avatar {
+    display: block;
+    object-fit: cover;
+    object-position: 0 0;
+    @include inline-mod;
+    @include modifier('smaller') {
+        width: 1rem;
+        height: 1rem;      
+    }
+
+    @include modifier('small') {
+        width: 2rem;
+        height: 2rem;         
+    }
+
+    @include modifier('medium') {
+        width: 3rem; 
+        height: 3rem;        
+    }
+
+    @include modifier('large') {
+        width: 4rem;  
+        height: 4rem;       
+    }
+
+    @include modifier('larger') {
+        width: 5rem; 
+        height: 5rem;       
+    }
+}
+
+

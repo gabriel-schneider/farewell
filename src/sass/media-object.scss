@@ -1,0 +1,11 @@
+.media {
+    display: flex;
+    flex-direction: row;
+    @include modifier('reverse') {
+        flex-direction: row-reverse;
+        .media__content {
+            text-align: end;
+        }        
+    }
+
+}

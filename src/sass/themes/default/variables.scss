@@ -9,5 +9,6 @@ $main-colors: (
 
 $button-colors: map-merge($main-colors, ('default': #f0f0f0));
 
+$font-size: 14px;
 $font-family: ('Open Sans', 'Arial', sans-serif);
 $font-family-monospaced: ('Inconsolata', 'Times', serif, monospace);
