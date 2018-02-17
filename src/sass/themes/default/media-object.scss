@@ -1,0 +1,12 @@
+.media {
+    @include element('figure') {
+        display: inline-flex;
+        flex-direction: column;        
+        margin: 0.5rem;
+        margin-top: 1.25rem;
+    }
+    
+    @include element('content') {
+        flex-grow: 1;
+    }
+}

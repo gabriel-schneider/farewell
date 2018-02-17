@@ -1,16 +1,11 @@
-
-//@import 'mixins/grid';
-
 .media {
     display: flex;
     flex-direction: row;
-    background-color: red;
-}
+    @include modifier('reverse') {
+        flex-direction: row-reverse;
+        .media__content {
+            text-align: end;
+        }        
+    }
 
-.media-figure {
-
-}
-
-.media-content {
-    flex-grow: 1;
 }

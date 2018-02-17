@@ -238,11 +238,11 @@
 
 .media {
   display: flex;
-  flex-direction: row;
-  background-color: red; }
-
-.media-content {
-  flex-grow: 1; }
+  flex-direction: row; }
+  .media--reverse {
+    flex-direction: row-reverse; }
+    .media--reverse .media__content {
+      text-align: end; }
 
 .button {
   border-radius: 1px; }
@@ -268,9 +268,18 @@
     .button-default:active {
       background-color: #e3e3e3; }
 
+.media__figure {
+  display: inline-flex;
+  flex-direction: column;
+  margin: 0.5rem;
+  margin-top: 1.25rem; }
+
+.media__content {
+  flex-grow: 1; }
+
 html {
   font-family: "Open Sans", "Arial", sans-serif;
-  font-size: 16px; }
+  font-size: 14px; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
