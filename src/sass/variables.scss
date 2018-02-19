@@ -1,6 +1,12 @@
+/* 
+ * When the screen width is larger than the breakpoint value
+ * then this breakpoint is active unless the screen width reach
+ * another breakpoint
+ */
+ 
 $breakpoints: (
-   'sm': 320px,
-   'md': 768px,
+   'sm': 0px,
+   'md': 512px,
    'lg': 1024px
 ) !default;
 

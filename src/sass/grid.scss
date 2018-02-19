@@ -8,43 +8,45 @@
         padding: $columns-gap;      
     }
 
-    &.gapless {
+    @include modifier('gapless') {
         @include gapless;
     }
+    
 
     .row {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
 
-        &.row-center {
+        
+        @include modifier('center') {
             justify-content: center;
         }
 
-        &.row-end {
+        @include modifier('end') {
             justify-content: flex-end; 
         }
 
-        &.row-between {
+        @include modifier('between') {
             justify-content: space-between;
         }
 
-        &.row-around {
+        @include modifier('around') {
             justify-content: space-around;
         }
 
-        &.row-gapless {
+        @include modifier('gapless') {
             @include gapless;
         }
     }
 
 }
 
-@include generate-columns($columns-count, 0, '');
+@include generate-columns($columns-count, 0, '-');
 
 @each $key, $value in $breakpoints {
     @media (min-width: $value) {
-        @include generate-columns($columns-count, $value, '-' + $key);
+        @include generate-columns($columns-count, $value, '--' + $key);
     }
 }
 
