@@ -8,6 +8,24 @@
     }
 }
 
+@mixin when-breakpoint-is($breakpoint) {
+    $value: map-get($breakpoints, $breakpoint);
+
+    @if type-of($value) == "list" {    
+        @media (min-width: nth($value, 1)) and (max-width: nth($value, 2)) {
+            @content;
+        }    
+    } @else if index(($breakpoints), ($k $v)) == 1 {
+        @media (max-width: $v) {
+            @content;
+        }
+    } @else {
+        @media (min-width: $v) {
+            @content;
+        }
+    }
+}
+
 @mixin gapless {
     [class*=col] {
         padding: 0;      

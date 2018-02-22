@@ -44,6 +44,7 @@
 // General Column
 @include generate-columns($columns-count, '');
 
+// Responsive Columns
 @each $k, $v in $breakpoints {
     @if type-of($v) == "list" {
         $list: $v;
