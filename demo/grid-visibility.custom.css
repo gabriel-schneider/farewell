@@ -1,0 +1,17 @@
+
+[class*=col] p {
+    color: white;
+    background-color: #2980b9;    
+    border-radius: 3px;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.col--sm-hide p {
+    background-color: #e74c3c;
+}
+
+
+.col--md-hide p {
+    background-color: #2ecc71;
+}

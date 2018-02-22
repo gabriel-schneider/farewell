@@ -1,4 +1,3 @@
-
 @import 'mixins/grid';
 
 .grid {
@@ -42,11 +41,32 @@
 
 }
 
-@include generate-columns($columns-count, 0, '-');
+// General Column
+@include generate-columns($columns-count, '');
 
-@each $key, $value in $breakpoints {
-    @media (min-width: $value) {
-        @include generate-columns($columns-count, $value, '--' + $key);
+@each $k, $v in $breakpoints {
+    @if type-of($v) == "list" {
+        $list: $v;
+        @media (min-width: nth($list, 1)) and (max-width: nth($list, 2)) {
+            @include generate-columns($columns-count, '-' + $k);
+            .col--#{$k}-hide {
+                display: none;
+            }
+        }    
+    } @else if index(($breakpoints), ($k $v)) == 1 {
+        @media (max-width: $v) {
+            @include generate-columns($columns-count, '-' + $k);
+            .col--#{$k}-hide {
+                display: none;
+            }
+        }
+    } @else {
+        @media (min-width: $v) {
+            @include generate-columns($columns-count, '-' + $k);
+            .col--#{$k}-hide {
+                display: none;
+            }
+        }
     }
 }
 

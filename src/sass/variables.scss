@@ -1,13 +1,10 @@
-/* 
- * When the screen width is larger than the breakpoint value
- * then this breakpoint is active unless the screen width reach
- * another breakpoint
- */
- 
+$breakpoint-sm-end: 512px;
+$breakpoint-md-end: 1024px;
+
 $breakpoints: (
-   'sm': 0px,
-   'md': 512px,
-   'lg': 1024px
+    'sm': 511px,
+    'md': (512px, 1023px),
+    'lg': 1024px
 ) !default;
 
 $columns-count: 12 !default;

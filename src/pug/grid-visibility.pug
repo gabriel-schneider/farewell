@@ -1,0 +1,14 @@
+extends base.pug
+      
+block content
+    h3(class="h3") Column Visiblity Test
+    div(class="grid")
+        div(class="row")
+            div(class="col--12 col--sm-hide")
+                    p(class="p") This column hides when the screen is SMALL!
+        div(class="row")
+            div(class="col--12 col--md-hide")
+                    p(class="p") This column hides when the screen is MEDIUM!
+        div(class="row")
+            div(class="col--12 col--lg-hide")
+                    p(class="p") This column hides when the screen is LARGE!         

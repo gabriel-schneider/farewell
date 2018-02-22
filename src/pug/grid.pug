@@ -28,9 +28,20 @@ block content
     div(class="grid")
         div(class="row")
             - for(var i = 0; i < 4; i++)
-                div(class="col--lg-3 col--md-6 col--sm-12")
+                div(class="responsive-demo col--sm-hide col--lg-3 col--md-6 col--sm-12")
                     p(class="p") Laborum dolor aute aliqua sunt ipsum ullamco minim minim enim commodo.         
     
+    h3(class="h3 title") Size specific columns
+    p(class="p subtitle") Columns can hide in certain screen width
+    div(class="grid")
+        div(class="row")
+            div(class="col--4 col--sm-hide debug")
+                    p(class="p") Laborum dolor aute aliqua sunt ipsum ullamco minim minim enim commodo.         
+            div(class="col--4 col--md-hide debug")
+                    p(class="p") Laborum dolor aute aliqua sunt ipsum ullamco minim minim enim commodo.         
+            div(class="col--4 col--lg-hide debug")
+                    p(class="p") Laborum dolor aute aliqua sunt ipsum ullamco minim minim enim commodo.         
+
     h3(class="h3 title") Align Row Columns
     p(class="p subtitle") Align rows is easy with simple modifiers
 

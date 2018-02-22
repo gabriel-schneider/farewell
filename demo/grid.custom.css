@@ -8,4 +8,23 @@ body {
     background-color: #2980b9;    
     border-radius: 3px;
     padding: 0.5rem;
+    text-align: center;
 }
+
+
+.responsive-demo p {
+    background-color: #e74c3c;
+}
+
+@media (min-width: 512px) {
+    .responsive-demo p {
+        background-color: #e67e22;
+    }
+}
+
+@media (min-width: 1024px) {
+    .responsive-demo p {
+        background-color: #2980b9;
+    }
+}
+

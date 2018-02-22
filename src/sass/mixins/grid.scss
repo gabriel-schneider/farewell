@@ -1,11 +1,11 @@
-@mixin generate-columns($count, $screen-min-width, $prefix) {
+@mixin generate-columns($count, $prefix) {
     @for $i from 1 through $count {
-        .col#{$prefix}-#{$i} {
+        .col-#{$prefix}-#{$i} {
             $width: ($i * 100% / $count);
             width: $width;      
             min-width: $width;      
-      }
-   }
+        }        
+    }
 }
 
 @mixin gapless {
