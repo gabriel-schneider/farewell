@@ -1,11 +1,16 @@
 extends base.pug
 
 block content
-    - var classes = ['', 'button-default', 'button-primary', 'button-secundary']
+    - var classes = ['', 'button--default', 'button--primary', 'button--secundary']
     h2(class="h2") Links
     div
         each cls in classes
             a(class="button " + cls href="#") Button
+            a(class="button button--icon " + cls href="#")
+                i(class="fas fa-heart")
+                | Button
+            a(class="button button--icon-only " + cls href="#")
+                i(class="fas fa-heart")
 
     h2(class="h2") Buttons 
     div
@@ -20,17 +25,17 @@ block content
     h2(class="h2") Button Group
     div 
         div(class="button-group")
-            a(class="button button-primary") Button
-            a(class="button button-primary") Button
-            a(class="button button-primary") Button
+            a(class="button button--primary") Button
+            a(class="button button--primary") Button
+            a(class="button button--primary") Button
     div 
         div(class="button-group")
-            button(class="button button-primary") Button
-            button(class="button button-primary") Button
-            button(class="button button-primary") Button
+            button(class="button button--primary") Button
+            button(class="button button--primary") Button
+            button(class="button button--primary") Button
     div
         div(class="button-group")
-            input(class="button button-primary" type="submit" value="Button")
-            input(class="button button-primary" type="submit" value="Button")
-            input(class="button button-primary" type="submit" value="Button")                   
+            input(class="button button--primary" type="submit" value="Button")
+            input(class="button button--primary" type="submit" value="Button")
+            input(class="button button--primary" type="submit" value="Button")                   
                 

@@ -233,8 +233,19 @@
   color: inherit;
   font-family: inherit;
   line-height: 1em;
+  height: 2em;
   cursor: pointer;
   margin: 0 0.5em 0.5em 0; }
+  .button--icon {
+    display: inline-block; }
+    .button--icon > .svg-inline--fa {
+      margin: 0 0.25em; }
+  .button--icon-only {
+    display: inline-block;
+    width: 2em;
+    height: 2em; }
+    .button--icon-only > .svg-inline--fa {
+      margin-left: -1px; }
 
 .button-group {
   display: inline-flex;
@@ -252,27 +263,36 @@
 
 .button {
   border-radius: 1px; }
-  .button-primary {
+  .button.button--primary {
     background-color: #3fa696;
     color: white; }
-    .button-primary:hover {
+    .button.button--primary:hover {
       background-color: #46b8a7; }
-    .button-primary:active {
+    .button.button--primary:active {
       background-color: #389485; }
-  .button-secundary {
+  .button.button--secundary {
     background-color: #48636a;
     color: white; }
-    .button-secundary:hover {
+    .button.button--secundary:hover {
       background-color: #527179; }
-    .button-secundary:active {
+    .button.button--secundary:active {
       background-color: #3e555b; }
-  .button-default {
+  .button.button--default {
     background-color: #f0f0f0;
     color: black; }
-    .button-default:hover {
+    .button.button--default:hover {
       background-color: #fdfdfd; }
-    .button-default:active {
+    .button.button--default:active {
       background-color: #e3e3e3; }
+
+.button-group .button {
+  border-radius: 0px; }
+  .button-group .button:last-of-type {
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px; }
+  .button-group .button:first-of-type {
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px; }
 
 .media__figure {
   display: inline-flex;
